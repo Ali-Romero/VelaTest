@@ -1,0 +1,110 @@
+.main-section
+  background: linear-gradient(135deg, #672870 20%, #4fe0ff 100%);
+  color: $color-white
+  flex: 1
+  min-height: 100%
+  font-family: "TenorSans-Regular"
+  font-weight: 400
+  overflow: hidden
+
+  &__inner
+    padding: 32px 0 186px 0
+    position relative
+    z-index 1
+    +above($breakpoints.sm)
+      padding: 40px 0 40px 24px
+    +above($breakpoints.md)
+      padding: 60px 0 60px 30px
+    +above($breakpoints.xxl)
+      padding: 84px 0 84px 60px
+
+  &__title
+    font-size: 24px
+    line-height: 108%
+    +above($breakpoints.sm)
+      line-height: 112%
+      font-size: 25px
+    +above($breakpoints.md)
+      font-size: 28px
+    +above($breakpoints.xxl)
+      font-size: 32px
+
+  &__description
+    margin: 24px 0
+    line-height: 136%
+    font-size: 14px
+    display: -webkit-box;
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+    +above($breakpoints.sm)
+      -webkit-line-clamp: unset
+      -webkit-box-orient: unset
+      overflow: unset
+      margin: 24px 0
+      line-height: 133%
+      max-width: 544px
+      font-size: 15px
+    +above($breakpoints.md)
+      max-width: 582px
+      font-size: 16px
+    +above($breakpoints.xxl)
+      margin: 26px 0
+      font-size: 18px
+      line-height: 133%
+      max-width: 639px
+    &.expanded
+      -webkit-line-clamp: unset
+      overflow: visible
+
+  &__button
+    button
+      border: none
+      cursor pointer
+      background-color: $color-white
+      color: #672870;
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: 0.3s
+      width 120px
+      height: 40px
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 125%;
+      +above($breakpoints.xxl)
+        width 149px
+        height: 52px
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 125%;
+      &:hover
+        opacity 0.9
+
+  &__image
+    position: absolute
+    z-index -1
+    bottom: -92px
+    right: -217px;
+    +above($breakpoints.sm)
+      bottom: auto
+      top: 18px;
+      right: -110px;
+    +above($breakpoints.md)
+      top: -62px
+      right -161px
+    +above($breakpoints.xxl)
+      top: -99px
+      right -241px
+    img
+      height: auto
+      width 397px
+      +above($breakpoints.sm)
+        height: 249px
+        width 270px
+      +above($breakpoints.md)
+        height: 423px
+        width 460px
+      +above($breakpoints.xxl)
+        width 767px
+        height: 706px

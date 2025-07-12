@@ -1,0 +1,66 @@
+.search-form
+  display: flex
+  border: 1px solid rgba(72, 136, 255, 0.2);
+  overflow: hidden
+  border-radius: 8px;
+  transition: 0.3s
+  height: 46px
+  +above($breakpoints.sm)
+    border-radius: 6px;
+    height: 30px
+  +above($breakpoints.md)
+    height: 40px
+  +above($breakpoints.xxl)
+    height: 48px
+    border-radius: 8px;
+  &:focus-within
+    border: 1px solid $color-blue
+
+.search-input
+  flex: 1
+  border: none
+  color: #333
+  outline: none
+  font-size: 14px;
+  padding: 0px 16px;
+  +above($breakpoints.sm)
+    font-size: 12px;
+    padding: 0px 12px;
+  +above($breakpoints.md)
+    font-size: 13px
+    padding: 0 16px
+  +above($breakpoints.xxl)
+    font-size: 14px
+    padding: 0 24px
+
+.search-button
+  background: $color-blue
+  color: $color-white
+  border: none
+  cursor: pointer
+  transition: 0.3s
+  margin: 3px
+  padding: 0 8px
+  border-radius: 5px
+  +above($breakpoints.sm)
+    border-radius: 3px
+    font-size: 11px
+    margin: 2px
+    padding: 0 16px
+  +above($breakpoints.md)
+    font-size: 13px
+    margin: 4px
+  +above($breakpoints.xxl)
+    padding: 0 20px
+    font-size: 14px
+    border-radius: 4px
+  &:hover
+    opacity 0.9
+  span
+    display: none
+    +above($breakpoints.sm)
+      display: block
+  svg
+    display: block
+    +above($breakpoints.sm)
+      display: none

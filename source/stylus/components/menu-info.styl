@@ -1,0 +1,66 @@
+.menu-info
+  display: flex
+  gap: 10px
+  padding: 10px
+  +above($breakpoints.md)
+    gap: 16px
+    padding: 18px
+  +above($breakpoints.xxl)
+    gap: 36px
+    padding: 28px
+
+  &__container
+    width 154px
+    +above($breakpoints.md)
+      width 164px
+    +above($breakpoints.xxl)
+      width 228px
+
+  &__title
+    font-family: "Maza-Regular"
+    line-height: normal
+    font-size: 20px
+    margin: 0 0 6px 0
+    +above($breakpoints.md)
+      font-size: 24px
+      margin: 0 0 8px 0
+    +above($breakpoints.xxl)
+      font-size: 30px
+      margin: 0 0 10px 0
+
+  &__box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    transition: 0.3s
+    cursor pointer
+    padding: 4px 0
+    +above($breakpoints.xxl)
+      padding: 5px 0
+    &:hover
+      color: $color-blue
+      span
+        color: $color-blue
+      svg
+        opacity 1
+    svg
+      width 18px
+      height: 18px
+      opacity 0
+      transition: 0.3s
+      +above($breakpoints.md)
+        width 20px
+        height: 20px
+      +above($breakpoints.xxl)
+        width 24px
+        height: 24px
+
+  &__description
+    span
+      transition: 0.3s
+      color: rgba(52, 58, 63, 0.5);
+      font-size: 10px
+      +above($breakpoints.md)
+        font-size: 12px
+      +above($breakpoints.xxl)
+        font-size: 14px

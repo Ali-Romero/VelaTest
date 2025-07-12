@@ -1,0 +1,62 @@
+.active-box
+  border-radius: 3px;
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $color-grey
+  transition: 0.3s
+  cursor pointer
+  border: none
+  width 40px
+  height: 40px
+  position relative
+  +above($breakpoints.sm)
+    width 22px
+    height: 22px
+  +above($breakpoints.md)
+    width 40px
+    height: 40px
+  +above($breakpoints.xxl)
+    width 48px
+    height: 48px
+    border-radius: 4px;
+  &:hover
+    background: $color-grey-2
+    svg
+      path
+        fill: $color-blue
+  svg
+    width 20px
+    height: 20px
+    +above($breakpoints.sm)
+      width 14px
+      height: 14px
+    +above($breakpoints.md)
+      width 20px
+      height: 20px
+    +above($breakpoints.xxl)
+      width 24px
+      height: 24px
+    path
+      transition: 0.3s
+  &--outline
+    background: none
+    border: 1px solid #D3D3D3
+    &:hover
+      border: 1px solid $color-blue
+      background: none
+
+  &__count
+    width 20px
+    height: 20px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 12px
+    background-color: $color-blue
+    color: $color-white
+    font-family: "Maza-Regular"
+    border-radius: 100%
+    right: -4px
+    top: -10px
+    position: absolute

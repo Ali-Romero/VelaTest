@@ -1,0 +1,24 @@
+@font-face
+  font-family: "TenorSans-Regular"
+  src: url('../fonts/TenorSans-Regular.woff'), url('../fonts/TenorSans-Regular.woff2')
+  font-display: swap
+@font-face
+  font-family: "Maza-Regular"
+  src: url('../fonts/Maza-Regular.woff'), url('../fonts/Maza-Regular.woff2')
+  font-display: swap
+
+@import 'common/variables'
+@import 'common/*'
+@import 'components/*'
+
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow: hidden
+  position relative
+
+  &__content
+    flex: 1
+    display: flex
+    justify-content: center

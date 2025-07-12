@@ -1,0 +1,29 @@
+.menu-content
+  box-shadow: 0 0 10px 0 rgba(157, 157, 157, 0.35);
+  background-color: $color-white
+  border-radius: 8px;
+  position relative
+  opacity 0
+  transition: 0.3s
+  pointer-events: none
+  position: absolute
+  z-index 22
+  top: 100%
+  left: 0
+  right 0
+  margin: 20px 0 0 0
+  +above($breakpoints.md)
+    margin: 24px 0 0 0
+  &.active
+    pointer-events: unset
+    opacity 1
+
+  &__list
+    height: 286px
+    padding: 14px 0
+    +above($breakpoints.md)
+      padding: 20px 0
+      height: 326px
+    +above($breakpoints.xxl)
+      padding: 30px 0
+      height: 420px

@@ -1,0 +1,51 @@
+.lang
+  display: flex
+  align-items: center
+  gap: 4px
+  justify-content: flex-end
+  +above($breakpoints.md)
+    justify-content: flex-start
+  +above($breakpoints.xxl)
+    gap: 6px
+  svg
+    width 16px
+    height: 16px
+    +above($breakpoints.xxl)
+      width 24px
+      height: 24px
+
+  &__active
+    display: flex
+    align-items: center
+
+  &__sep
+    margin: auto
+    background: #343a3f
+    width 1px
+    height: 12px
+    +above($breakpoints.sm)
+      height: 10px
+    +above($breakpoints.xxl)
+      height: 12px
+
+  &__label
+    background: none
+    border: none
+    opacity: 0.4
+    cursor pointer
+    padding: 4px
+    transition: 0.3s
+    font-size: 14px
+    font-family: "Maza-Regular"
+    +above($breakpoints.sm)
+      padding: 2px
+      font-size: 13px
+    +above($breakpoints.md)
+      font-size: 14px
+    +above($breakpoints.xxl)
+      font-size: 16px
+      padding: 4px
+    &.active
+      opacity: 1
+    &:hover
+      color: $color-blue

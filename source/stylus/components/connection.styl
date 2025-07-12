@@ -1,0 +1,23 @@
+.connection
+  &__list
+    display: flex
+    align-items: center
+    gap: 10px
+    +above($breakpoints.xxl)
+      gap: 12px
+
+  &__link
+    display: flex
+    align-items: center
+    transition: 0.3s
+    gap: 2px
+    +above($breakpoints.xxl)
+      gap: 4px
+    &:hover
+      color: $color-blue
+      svg
+        path
+          fill: $color-blue
+    svg
+      path
+        transition: 0.3s

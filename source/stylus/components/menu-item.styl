@@ -1,0 +1,86 @@
+.menu-item
+  background-color: #F4F4F4
+  border-radius: 6px
+  +above($breakpoints.sm)
+    background-color: unset
+    border-radius: 0
+    display: inline-block
+    width: 232px
+  +above($breakpoints.md)
+    width: 252px
+  +above($breakpoints.xxl)
+    width: 338px
+  &:hover
+    .menu-item__info
+      +above($breakpoints.sm)
+        opacity 1
+        visibility: visible
+  .menu-count
+    color: rgba(52, 58, 63, 0.5)
+
+  &__box
+    display: flex
+    cursor pointer
+    align-items: center
+    justify-content: space-between
+    transition: 0.3s
+    height: 48px
+    padding: 0 0 0 14px
+    +above($breakpoints.sm)
+      height: 40px
+      border-bottom: 1px solid #f3f3f3
+    +above($breakpoints.md)
+      padding: 0 0 0 20px
+      height: 46px
+    +above($breakpoints.xxl)
+      height: 55px
+      padding: 0 0 0 30px
+    &:hover
+      background: #f3f3f3;
+      .menu-item__pointer
+        svg
+          path
+            stroke: $color-blue
+
+  &__description
+    display: flex
+    align-items: center
+    gap: 10px
+    +above($breakpoints.md)
+      gap: 12px
+    +above($breakpoints.xxl)
+      gap: 16px
+    svg
+      width 14px
+      height: 14px
+      +above($breakpoints.md)
+        width 20px
+        height: 20px
+      +above($breakpoints.xxl)
+        width 24px
+        height: 24px
+
+  &__pointer
+    svg
+      width 20px
+      height: 20px
+      +above($breakpoints.md)
+        width 24px
+        height: 24px
+      path
+        transition: 0.3s
+
+  &__info
+    +above($breakpoints.sm)
+      position: absolute
+      z-index 11
+      top: 0
+      right 0
+      opacity: 0
+      visibility: hidden
+      transition: all 0.3s ease
+      width 332px
+    +above($breakpoints.md)
+      width 385px
+    +above($breakpoints.xxl)
+      width 560px

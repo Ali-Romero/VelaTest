@@ -1,0 +1,115 @@
+.header
+  &__mobile
+    background-color: $color-white
+    font-size: 14px
+    line-height: normal
+    +above($breakpoints.sm)
+      display: none
+
+  &__mobile-inner
+    padding: 0 0 24px 0
+
+  &__mobile-active
+    padding: 10px 0
+
+  &__mobile-info
+    background: #f4f4f4;
+    padding: 2px 0
+
+  &__mobile-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__mobile-list
+    display: flex
+    gap: 6px
+
+  &__mobile-logo
+    svg
+      width 56px
+      height: 56px
+
+  &__desktop
+    display: none
+    +above($breakpoints.sm)
+      display: block
+      background-color: $color-white
+      line-height: normal
+      font-size: 13px
+      padding: 0 0 18px 0
+    +above($breakpoints.xxl)
+      font-size: 16px
+      padding: 0 0 24px 0
+
+  &__info
+    background-color: $color-grey
+    padding: 5px 0
+    margin: 0 0 12px 0
+    font-size: 12px
+    +above($breakpoints.xxl)
+      font-size: 14px
+      padding: 7px 0
+      margin: 0 0 16px 0
+
+  &__row
+    display: flex
+    justify-content: space-between
+
+  &__col
+    &:nth-child(2)
+      width 100%
+      max-width: 566px
+      +above($breakpoints.md)
+        max-width: 638px
+      +above($breakpoints.xxl)
+        max-width: 901px
+
+  &__logo
+    svg
+      width 38px
+      height: 38px
+      +above($breakpoints.md)
+        width 48px
+        height: 48px
+      +above($breakpoints.xxl)
+        width 80px
+        height: 80px
+
+  &__content
+    position: relative
+
+  &__active
+    display: flex
+    align-items: center
+    gap: 10px
+    margin: 0 0 10px 0
+    +above($breakpoints.xxl)
+      gap: 16px
+      margin: 0 0 16px 0
+
+  &__search-form
+    flex: 1
+
+  &__container
+    display: flex
+    gap: 2px
+    flex-direction: column-reverse
+    +above($breakpoints.md)
+      gap: 23px
+      flex-direction: row
+    +above($breakpoints.xxl)
+      gap: 48px
+
+  &__lang
+    +above($breakpoints.md)
+      margin: 10px 0 0 0
+    +above($breakpoints.xxl)
+      margin: 12px 0 0 0
+
+  &__action-bar
+    margin: 0 0 4px 0
+    +above($breakpoints.md)
+      margin: 0 0 10px 0
+    +above($breakpoints.xxl)
+      margin: 0 0 16px 0

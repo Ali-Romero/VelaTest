@@ -1,0 +1,23 @@
+.contacts
+  &__list
+    display: flex
+    flex-direction: column
+    +above($breakpoints.sm)
+      align-items: center
+      flex-direction: row
+
+  &__link
+    display: block
+    transition: 0.3s
+    border-bottom: 1px solid #E8E8E8
+    height: 46px
+    display: flex
+    align-items: center
+    +above($breakpoints.sm)
+      height: unset
+      border-bottom: 0
+      padding: 0 8px
+    +above($breakpoints.md)
+      padding: 0 10px
+    &:hover
+      color: $color-blue

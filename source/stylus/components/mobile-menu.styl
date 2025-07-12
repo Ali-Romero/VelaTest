@@ -1,0 +1,111 @@
+.mobile-menu
+  width 100%
+  background #fff
+  height: 0
+  opacity 0
+  pointer-events: none
+  font-size: 16px
+  &.active
+    height: auto
+    opacity 1
+    pointer-events: unset
+    margin: 32px 0 0 0
+
+  &__inner
+    margin: 0 0 24px 0
+
+  &__header
+    position relative
+
+  &__top
+    transition opacity 0.3s ease, transform 0.3s ease
+    display: flex
+    justify-content: space-between
+    margin: 0 0 24px 0
+    &.hidden
+      opacity 0
+      transform scale(0)
+      pointer-events none
+      height: 0
+      position: absolute
+
+  &__item-box
+    display: flex
+    gap: 6px
+    margin: 0 0 8px 0
+    &:last-child
+      margin: 0
+
+  &__back
+    display flex
+    align-items center
+    gap 10px
+    padding 4px 0 24px 0
+    transition opacity 0.3s ease, transform 0.3s ease
+    height: auto
+    &.hidden
+      opacity 0
+      transform scale(0)
+      height: 0
+      padding: 0
+      pointer-events none
+
+  &__back-button
+    background none
+    border none
+    cursor pointer
+    display: flex
+    gap: 29px
+    align-items: center
+    svg
+      transform: rotate(180deg)
+
+  &__title
+    font-size 20px
+    font-family: "Maza-Regular"
+
+  &__level
+    transition opacity 0.3s ease
+    &.hidden
+      opacity 0
+      pointer-events none
+      position absolute
+      top 0
+      left 0
+      transform: scale(0)
+    &--main
+      li
+        padding 12px
+        cursor pointer
+        height: 48px
+        background-color: #F4F4F4
+        border-radius: 6px
+        margin: 0 0 10px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &:last-child
+          margin: 0
+    .has-products
+      .mobile-menu__level-pointer
+        opacity 1
+
+  &__level-description
+    display: flex
+    align-items: center
+    gap: 17px
+    svg
+      width 24px
+      height: 24px
+
+  &__sub-content
+    li
+      margin: 0 0 8px 0
+      &:last-child
+        margin: 0
+
+  &__level-pointer
+    opacity 0
+
+  &__button
+    margin: 0 0 20px 0

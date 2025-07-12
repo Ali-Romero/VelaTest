@@ -1,0 +1,97 @@
+.menu-burger
+  background: $color-blue
+  border: none
+  cursor: pointer
+  padding: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: 0.3s
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  position relative
+  +above($breakpoints.sm)
+    border-radius: 6px;
+    width: 53px;
+    height: 30px;
+  +above($breakpoints.md)
+    width: 64px
+    height: 40px
+  +above($breakpoints.xxl)
+    border-radius: 8px;
+    width: 101px
+    height: 48px
+  &:hover
+    opacity 0.9
+  &.active
+    &:before
+      opacity 1
+      transform: scale(1)
+      transition: 0.3s
+      +above($breakpoints.sm)
+        pointer-events: none
+        content: none
+    svg
+      visibility: visible
+      opacity 1
+      transform: rotate(0deg)
+      transition: 0.3s
+
+  &:before
+    content: ""
+    opacity 0
+    position: absolute
+    transform: scale(0.8)
+    transition: 0.3s
+    top: -1px
+    bottom: -1px
+    left: -1px
+    right -1px
+    background-color: #e8e8e8
+    border-radius: inherit
+    +above($breakpoints.sm)
+      content: none
+  svg
+    position absolute
+    z-index 2
+    opacity 0
+    visibility: hidden
+    transition: 0.2s
+    transform: rotate(120deg)
+    z-index 2
+    left: 0
+    right 0
+    bottom: 0
+    top: 0
+    margin: auto
+    width 24px
+    height: 24px
+    +above($breakpoints.sm)
+      pointer-events: none
+      display: none
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 4px
+    width: 22px
+    +above($breakpoints.sm)
+      width: 28px
+    +above($breakpoints.xxl)
+      width: 38px
+      gap: 5px
+
+  &__line
+    display: block
+    background: $color-white
+    border-radius: 100px
+    width: 100%
+    height: 2px
+    &:nth-child(2)
+      width 15px
+      +above($breakpoints.sm)
+        width 18px
+      +above($breakpoints.xxl)
+        width 24px

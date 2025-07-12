@@ -1,0 +1,424 @@
+mixin header()
+  header.header
+    .header__mobile
+      .header__mobile-inner
+        .header__mobile-info
+          .wrapper
+            .info
+              ul.info__list
+                li.info__list-item
+                  .lang
+                    include ../icons/LangIcon
+                    .lang__active
+                      a(href="#").lang__label.active RU
+                      span.lang__sep
+                      a(href="#").lang__label EN
+                li.info__list-item
+                  .connection
+                    ul.connection__list
+                      li.connection__item
+                        a(href="#", target="_blank", rel="noopener noreferrer").connection__link
+                          include ../icons/PhoneIcon
+                          |+7 555 555-37-50
+        .header__mobile-active
+          .wrapper
+            .header__mobile-row
+              .header__mobile-col
+                ul.header__mobile-list
+                  li.header__mobile-item
+                    button(aria-label="Burger").menu-burger.tap-color
+                      span.menu-burger__inner
+                        span.menu-burger__line
+                        span.menu-burger__line
+                        span.menu-burger__line
+                      include ../icons/CloseIcon
+                  li.header__mobile-item
+                    button(aria-label="Hanter").active-box.active-box--outline.tap-color
+                      include ../icons/HanterIcon
+              .header__mobile-col
+                .header__mobile-logo
+                  include ../icons/LogoMain
+              .header__mobile-col
+                ul.header__mobile-list
+                  li.header__mobile-item
+                    button(aria-label="Wishlist").active-box.active-box--outline.tap-color
+                      include ../icons/WishlistIcon
+                  li.header__mobile-item
+                    button(aria-label="Basket").active-box.active-box--outline.tap-color
+                      include ../icons/BasketIcon
+                      span.active-box__count 20
+        .header__mobile-search
+          .wrapper
+            form.search-form
+              input(type="text" name="search" autocomplete="off" placeholder="Поиск товаров…").search-input
+              button(type="submit" aria-label="Search").search-button.tap-color
+                span Найти
+                include ../icons/SearchIcon
+        .header__mobile-menu
+          .wrapper
+            .mobile-menu.menu-js
+              .mobile-menu__inner
+                .mobile-menu__header
+                  .mobile-menu__top.menu-mob-top
+                    .mobile-menu__item
+                      .mobile-menu__item-box
+                        include ../icons/LocationIcon
+                        span г.Москва
+                      .mobile-menu__item-box
+                        include ../icons/TimeIcon
+                        span Ежедневно 9:00 — 21:00
+                    .mobile-menu__item
+                      .mobile-menu__item-box
+                        a(href="#" target="_blank" aria-label="Telegram" rel="noopener noreferrer").active-box.tap-color
+                          include ../icons/SocialTelegram
+                        a(href="#" target="_blank" aria-label="Whatsapp" rel="noopener noreferrer").active-box.tap-color
+                          include ../icons/SocialWhatsapp
+
+                  .mobile-menu__back.hidden.menu-mob-back
+                    button(aria-label="Builder").mobile-menu__back-button.back-button
+                      include ../icons/PointerIcon
+                      span.mobile-menu__title.menu-mob-title Каталог
+
+                .mobile-menu__body
+                  .mobile-menu__level.mobile-menu__level--main.menu-mob-main
+                    ul
+                      li(data-section="catalog")
+                        .mobile-menu__level-description
+                          include ../icons/MenuCatalogIcon
+                          |Каталог
+                        .mobile-menu__level-pointer
+                          include ../icons/PointerIcon
+                      li(data-section="sales")
+                        .mobile-menu__level-description
+                          include ../icons/NavIcon1
+                          |Акции
+                        .mobile-menu__level-pointer
+                          include ../icons/PointerIcon
+                      li(data-section="hot")
+                        .mobile-menu__level-description
+                          include ../icons/NavIcon2
+                          |Горячее предложение
+                        .mobile-menu__level-pointer
+                          include ../icons/PointerIcon
+                      li(data-section="sets")
+                        .mobile-menu__level-description
+                          include ../icons/NavIcon3
+                          |Подарочные наборы
+                        .mobile-menu__level-pointer
+                          include ../icons/PointerIcon
+                      li(data-section="events")
+                        .mobile-menu__level-description
+                          include ../icons/NavIcon4
+                          |События
+                        .mobile-menu__level-pointer
+                          include ../icons/PointerIcon
+                      li(data-section="brands")
+                        .mobile-menu__level-description
+                          include ../icons/NavIcon5
+                          |Наши бренды
+                        .mobile-menu__level-pointer
+                          include ../icons/PointerIcon
+
+                  .mobile-menu__level.menu-mob-sub.hidden
+                    ul.mobile-menu__sub-content.menu-mob-sub-content
+
+              .mobile-menu__button
+                button(aria-label="Builder").builder
+                  include ../icons/PlusIcon
+                  span Собрать компьютер
+              .mobile-menu__contacts
+                nav.contacts
+                  ul.contacts__list
+                    li.contacts__item
+                      a(href="#" rel="noopener noreferrer").contacts__link Доставка
+                    li.contacts__item
+                      a(href="#" rel="noopener noreferrer").contacts__link Оплата
+                    li.contacts__item
+                      a(href="#" rel="noopener noreferrer").contacts__link Контакты
+    .header__desktop
+      .header__inner
+        .header__info
+          .wrapper
+            .info
+              ul.info__list
+                li.info__list-item
+                  .connection
+                    ul.connection__list
+                      li.connection__item
+                        a(href="#" rel="noopener noreferrer").connection__link
+                          include ../icons/LocationIcon
+                          |Сайлент-Хилл
+                      li.connection__item
+                        a(href="#" rel="noopener noreferrer").connection__link
+                          include ../icons/PhoneIcon
+                          |+7 555 555-37-50
+                li.info__list-item
+                  .info__description
+                    span Ежедневно 
+                    span 9:00 — 21:00
+                li.info__list-item
+                  nav.contacts
+                    ul.contacts__list
+                      li.contacts__item
+                        a(href="#" rel="noopener noreferrer").contacts__link Доставка
+                      li.contacts__item
+                        a(href="#" rel="noopener noreferrer").contacts__link Оплата
+                      li.contacts__item
+                        a(href="#" rel="noopener noreferrer").contacts__link Контакты
+
+        .header__action
+          .wrapper
+            .header__row
+              .header__col
+                .header__logo
+                  include ../icons/LogoMain
+
+              .header__col
+                .header__content
+                  .header__active
+                    .header__menu
+                      button(aria-label="Burger").menu-burger.tap-color
+                        span.menu-burger__inner
+                          span.menu-burger__line
+                          span.menu-burger__line
+                          span.menu-burger__line
+                    .header__search-form
+                      form.search-form
+                        input(type="text" name="search" autocomplete="off" placeholder="Поиск товаров…").search-input
+                        button(type="submit" aria-label="Search").search-button.tap-color
+                          span Найти
+                          include ../icons/SearchIcon
+                    .header__social
+                      .social
+                        ul.social__list
+                          li.social__item
+                            a(href="#" target="_blank" aria-label="Telegram" rel="noopener noreferrer")
+                              span.active-box
+                                include ../icons/SocialTelegram
+                          li.social__item
+                            a(href="#" target="_blank" aria-label="Whatsapp" rel="noopener noreferrer")
+                              span.active-box
+                                include ../icons/SocialWhatsapp
+                  nav.header__nav
+                    .nav-bar
+                      ul.nav-bar__list
+                        li.nav-bar__item
+                          .nav-item
+                            a(href="#").nav-item__link
+                              include ../icons/NavIcon1
+                              |Акции
+                        li.nav-bar__item
+                          .nav-item
+                            a(href="#").nav-item__link
+                              include ../icons/NavIcon2
+                              |Горячее предложение
+                        li.nav-bar__item
+                          .nav-item
+                            a(href="#").nav-item__link
+                              include ../icons/NavIcon3
+                              |Подарочные наборы
+                        li.nav-bar__item
+                          .nav-item
+                            a(href="#").nav-item__link
+                              include ../icons/NavIcon4
+                              |События
+                        li.nav-bar__item
+                          .nav-item
+                            a(href="#").nav-item__link
+                              include ../icons/NavIcon5
+                              |Наши бренды
+                  .header__menu-content
+                    .menu-content.menu-js
+                      ul.menu-content__list
+                        li.menu-content__item
+                          .menu-item.tap-color
+                            .menu-item__box
+                              span.menu-item__description
+                                include ../icons/MenuPhonesIcon
+                                |Смартфоны и гаджеты
+                              span.menu-item__pointer
+                                include ../icons/PointerIcon
+                            .menu-item__info
+                              .menu-info
+                                .menu-info__container
+                                  h3.menu-info__title Смартфоны
+                                  ul.menu-info__list
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Apple iPhone 
+                                          span 123
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Смартфоны 
+                                          span 227
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description iPhone 16 
+                                          span 120
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Складные 
+                                          span 30
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description realme 
+                                          span 120
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Huawei Mate X6 
+                                          span 100
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Кнопочные 
+                                          span 23
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Домашние 
+                                          span 17
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Samsung 
+                                          span 27
+                                        include ../icons/PointerIcon
+                                .menu-info__container
+                                  h3.menu-info__title Гаджеты
+                                  ul.menu-info__list
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Смарт-часы 
+                                          span 15
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Смарт-кольца 
+                                          span 34
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Наушники 
+                                          span 21
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Гарнитуры 
+                                          span 12
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Портативное аудио 
+                                          span 42
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Умные гаджеты 
+                                          span 46
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Очки VR 
+                                          span 49
+                                        include ../icons/PointerIcon
+                                    li.menu-info__item
+                                      .menu-info__box.tap-color
+                                        span.menu-info__description Для блогеров 
+                                          span 32
+                                        include ../icons/PointerIcon
+                        li.menu-content__item
+                          .menu-item.tap-color
+                            .menu-item__box
+                              span.menu-item__description
+                                include ../icons/MenuPcIcon
+                                |Ноутбуки и компьютеры
+                              span.menu-item__pointer
+                                include ../icons/PointerIcon
+                            .menu-item__info
+                              .menu-info
+                                .menu-info__container
+                                  h3.menu-info__title Ноутбуки
+                                .menu-info__container
+                                  h3.menu-info__title Компьютеры
+                        li.menu-content__item
+                          .menu-item.tap-color
+                            .menu-item__box
+                              span.menu-item__description
+                                include ../icons/MenuTvIcon
+                                |Телевизоры и цифровое ТВ
+                              span.menu-item__pointer
+                                include ../icons/PointerIcon
+                            .menu-item__info
+                              .menu-info
+                                .menu-info__container
+                                  h3.menu-info__title Телевизоры
+                                .menu-info__container
+                                  h3.menu-info__title Цифровое ТВ
+                        li.menu-content__item
+                          .menu-item.tap-color
+                            .menu-item__box
+                              span.menu-item__description
+                                include ../icons/MenuAudioIcon
+                                |Аудиотехника
+                              span.menu-item__pointer
+                                include ../icons/PointerIcon
+                            .menu-item__info
+                              .menu-info
+                                .menu-info__container
+                                  h3.menu-info__title Аудиотехника
+                        li.menu-content__item
+                          .menu-item.tap-color
+                            .menu-item__box
+                              span.menu-item__description
+                                include ../icons/MenuSaleIcon
+                                |Акции
+                              span.menu-item__pointer
+                                include ../icons/PointerIcon
+                            .menu-item__info
+                              .menu-info
+                                .menu-info__container
+                                  h3.menu-info__title Акции
+                        li.menu-content__item
+                          .menu-item.tap-color
+                            .menu-item__box
+                              span.menu-item__description
+                                include ../icons/MenuNewIcon
+                                |Новинки
+                              span.menu-item__pointer
+                                include ../icons/PointerIcon
+                            .menu-item__info
+                              .menu-info
+                                .menu-info__container
+                                  h3.menu-info__title Новинки
+
+              .header__col
+                .header__container
+                  .header__lang
+                    .lang
+                      include ../icons/LangIcon
+                      .lang__active
+                        a(href="#").lang__label.active RU
+                        span.lang__sep
+                        a(href="#").lang__label EN
+                  .header__box
+                    .header__action-bar
+                      .action-bar
+                        ul.action-bar__list
+                          li.action-bar__item
+                            button(aria-label="Wishlist").active-box.active-box--outline.tap-color
+                              include ../icons/WishlistIcon
+                          li.action-bar__item
+                            button(aria-label="Hanter").active-box.active-box--outline.tap-color
+                              include ../icons/HanterIcon
+                          li.action-bar__item
+                            button(aria-label="Basket").active-box.active-box--outline.tap-color
+                              include ../icons/BasketIcon
+                    .header__builder
+                      button(aria-label="Builder").builder
+                        include ../icons/PlusIcon
+                        span Собрать компьютер

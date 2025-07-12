@@ -1,0 +1,18 @@
+mixin footer()
+  footer.footer
+    .wrapper
+      .footer__row
+
+        .footer__col
+          .footer__description
+            div.font-m-bold VIANTAFEST
+            span Франшиза сценического ателье
+
+        .footer__col
+          .footer__logo
+            img(src="images/logo-main.svg" loading="lazy" alt="logo" width="63" height="93").d-block
+
+        .footer__col
+          .footer__connection
+            +connection()
+          a(href="#" data-remodal-target="privacy").footer__privacy.footer__privacy--1.font-s-15 Политика конфиденциальности
